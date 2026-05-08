@@ -184,14 +184,15 @@ BOOL EnumObjectHandles(HANDLE hProcess, PSYSTEM_HANDLE pObjHandle, LPCWSTR lpwHa
 		if (status == STATUS_SUCCESS) {
 			PUNICODE_STRING uFileName = (PUNICODE_STRING)OutputBuffer;
 			lpwFileName = PathFindFileNameW((LPWSTR)uFileName->Buffer);
-
+			
 			if (MSVCRT$_wcsicmp(lpwFileName, lpwHandleName) == 0) {
 				BeaconPrintf(CALLBACK_OUTPUT,
-				    "    ProcessName: %ls\n"
-				    "    ProcessID:   %lu\n" 
-				    "    Handle:      0x%x\n"
-				    "    HandleType:  %wZ\n"
-				    "    HandleName:  %ls\n", lpwProcName ,ulPid, pObjHandle->Handle, &objectTypeInfo->Name, lpwFileName);
+					"\n"
+				    "    [+] ProcessName: %ls\n"
+				    "        ProcessID:   %lu\n" 
+				    "        Handle:      0x%x\n"
+				    "        HandleType:  %ls\n"
+				    "        HandleName:  %ls\n", lpwProcName, ulPid, pObjHandle->Handle, objectTypeInfo->Name.Buffer, lpwFileName);
 			}
 		}
 	}

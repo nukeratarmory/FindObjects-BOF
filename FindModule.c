@@ -142,14 +142,15 @@ BOOL EnumerateProcessModules(HANDLE hProcess, LPCWSTR lpwModuleName, PUNICODE_ST
 		if (status != STATUS_SUCCESS) {
 			return FALSE;
 		}
-
+		
 		lpwDllName = PathFindFileNameW(wcFullDllName);
 		if (MSVCRT$_wcsicmp(lpwDllName, lpwModuleName) == 0) {
 			BeaconPrintf(CALLBACK_OUTPUT,
-				"    ProcessName: %wZ\n"
-				"    ProcessID:   %lu\n"
-				"    ImagePath:   %ls\n"
-				"    ModuleName:  %ls\n", uProcName, ulPid, wcImagePathName, wcFullDllName);
+				"\n"
+				"    [+] ProcessName: %ls\n"
+				"        ProcessID:   %lu\n"
+				"        ImagePath:   %ls\n"
+				"        ModuleName:  %ls\n", uProcName->Buffer, ulPid, wcImagePathName, wcFullDllName);
 		}
 
 		// Address of the next module in the list.
