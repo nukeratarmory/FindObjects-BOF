@@ -1,0 +1,54 @@
+{
+    "FindModule": {
+        "name": "FindModule",
+        "version": "0.0.1",
+        "uuid": "a1b2c3d4-e5f6-4789-abcd-012345678901",
+        "command": "find-module",
+        "type": "bof",
+        "repository": "https://github.com/nukeratarmory/FindObjects-BOF",
+        "metadata": {
+            "author": [
+                {
+                    "name": "outflanknl",
+                    "original_repository": "https://github.com/outflanknl/FindObjects-BOF"
+                },
+                {
+                    "name": "sliver",
+                    "original_repository": "https://github.com/sliver/FindObjects-BOF"
+                }
+            ],
+            "platform": [
+                "windows"
+            ],
+            "architecture": [
+                "x64"
+            ]
+        }
+    },
+    "FindProcHandle": {
+        "name": "FindProcHandle",
+        "version": "0.0.1",
+        "uuid": "b2c3d4e5-f6a7-4890-bcde-123456789012",
+        "command": "find-prochandle",
+        "type": "bof",
+        "repository": "https://github.com/nukeratarmory/FindObjects-BOF",
+        "metadata": {
+            "author": [
+                {
+                    "name": "outflanknl",
+                    "original_repository": "https://github.com/outflanknl/FindObjects-BOF"
+                },
+                {
+                    "name": "sliver",
+                    "original_repository": "https://github.com/sliver/FindObjects-BOF"
+                }
+            ],
+            "platform": [
+                "windows"
+            ],
+            "architecture": [
+                "x64"
+            ]
+        }
+    }
+}
