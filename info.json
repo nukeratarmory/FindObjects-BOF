@@ -1,7 +1,7 @@
 {
     "FindModule": {
         "name": "FindModule",
-        "version": "0.0.1",
+        "version": "0.0.2",
         "uuid": "a1b2c3d4-e5f6-4789-abcd-012345678901",
         "command": "find-module",
         "type": "bof",
